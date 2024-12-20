@@ -1,9 +1,9 @@
-import './styles.css';
+import SingleplayerDomFunctions from "./scripts/dom";
+import HumanPlayer from "./scripts/HumanPlayer";
+import ComputerPlayer from "./scripts/ComputerPlayer";
+import "./styles.css";
 
-function component() {
-  const element = document.createElement('div');
-  element.textContent = 'Hello, Project Template!';
-  return element;
-}
+const player = HumanPlayer();
+const enemy = ComputerPlayer();
 
-document.getElementById('app').appendChild(component());
+const dom = SingleplayerDomFunctions(enemy, player);
